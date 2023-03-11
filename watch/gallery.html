@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 100px;
+            gap: 1rem;
+        }
+        .gallery-image__container{
+            height: 100%;
+            width: 100%;
+            transition: 0.3s ease-in;
+            position: relative;
+        }
+        .gallery-image__container > img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .span-3-3{
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+
+        .span-3-2{
+             grid-column: span 3;
+            grid-row: span 2;
+        }
+        .span-2-1{
+             grid-column: span 2;
+            grid-row: span 1;
+        }
+        .span-1-3{
+             grid-column: span 1;
+            grid-row: span 3;
+        }
+        .span-5-2{
+             grid-column: span 5;
+            grid-row: span 2;
+        }
+
+        .gallery-image__container:nth-child(1)::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(to bottom, #999, transparent);
+            width: 100%;
+            height: 50px;
+            transition: 0.3s ease-in;
+            
+        }
+        .gallery-image__container:nth-child(1)::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(to top, #999, transparent);
+            width: 100%;
+            height: 50px;
+            transition: 0.3s ease-in;
+            
+        }
+        .gallery-image__container:nth-child(1):hover::after{
+            opacity: 0;
+        }
+        .gallery-image__container:nth-child(1):hover::before{
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class='bx bxs-watch'></i> Rolex
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#featured" class="nav__link">Featured</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">New</a>
+                        </li>
+                    </ul>
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+            </div>
+            <div class="nav__btns">
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+ 
+                    <div class="nav__shop" id="cart-shop">
+                        <i class='bx bx-shopping-bag' ></i>
+                    </div>
+ 
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <main class="main">
+        <section class="home" id="home">
+            
+            <div class="gallery container home__container ">
+
+                <div class="gallery-image__container span-3-3">
+                    <img src="https://picsum.photos/900" alt="">
+                </div>
+
+                 <div class="gallery-image__container span-3-2">
+                    <img src="https://picsum.photos/900/600" alt="">
+                </div>
+
+                 <div class="gallery-image__container span-2-1">
+                    <img src="https://picsum.photos/600/3 00" alt="">
+                </div>
+
+                 <div class="gallery-image__container span-1-3">
+                    <img src="https://picsum.photos/300/900" alt="">
+                </div>
+
+                 <div class="gallery-image__container span-5-2">
+                    <img src="https://picsum.photos/1000/400" alt="">
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>
+

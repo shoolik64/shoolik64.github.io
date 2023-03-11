@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		form{
+			width: 500px;
+			margin: 200px auto;
+			border: 1px solid black;
+		}
+
+		input:focus{
+			outline: none;
+			border: 2px red;
+		}
+	</style>
+</head>
+<body>
+
+	<video src="Video.mp4" autoplay loop muted ></video>
+	<video src="Video.mp4" controls ></video>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/EhwL0fqtFHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+	<iframe src="https://player.vimeo.com/video/1276250?h=33a94a39b2&title=0&byline=0&portrait=0" width="640" height="483" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+	<p><a href="https://vimeo.com/1276250">Cars ...</a> from <a href="https://vimeo.com/patbergeron">Patrick Bergeron</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+	
+	<form action="#">
+		<label for=""> Email </label>
+		<input type="email" placeholder="email@example.ru" name="email" autocomplete="on" />
+
+		<label for=""> Password </label>
+		<input type="Password" name="Password">
+		<br>
+		<label for="">
+			<input type="checkbox"> Lorem ipsum dolor, sit amet.
+		</label>
+		<textarea> </textarea>
+	</form>
+
+</body>
+</html>

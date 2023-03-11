@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SHOP</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<style>
+			center {
+    color: green;
+    text-shadow: red 0 0 2px;
+    
+   }
+		.galery{
+			display: grid;
+			grid-template-columns: repeat(6,1fr);
+			grid-auto-rows: 100px;
+			gap: 1rem;
+		}
+		.galery-image__container{
+			height: 100%;
+			width: 100%;
+			transition: 0.3s ease-in;
+			position: relative;
+		}
+		.galery-image__container > img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		.span-3-3{
+			grid-column: span 3;
+			grid-row: span 3;
+		}
+		.span-3-2{
+			grid-column: span 3;
+			grid-row: span 2;
+		}
+		.span-2-1{
+            grid-column: span 2;
+			grid-row: span 1;
+		}
+		.span-1-3{
+			grid-column: span 1;
+			grid-row: span 3;
+		}
+		.span-5-2{
+			grid-column: span 5;
+			grid-row: span 2;
+		}
+		.galery-image__container:nth-child(1)::before{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: linear-gradient(to bottom, #999, transparent);
+			width: 100%;
+			height: 50px;
+			transition: 0.3s ease-in;
+		}
+		.galery-image__container:nth-child(1)::after{
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: linear-gradient(to bottom, #999, transparent);
+			width: 100%;
+			height: 50px;
+			transition: 0.3s ease-in;
+		}
+		.galery-image__container:nth-child(1):hover::after{
+			opacity: 0;
+		}
+		.galery-image__container:nth-child(1):hover::before{
+			opacity: 0;
+		}
+		
+
+	</style>
+
+<main class="main">
+		<section class="home" id="home">
+			
+			<div><center>GALLERY</center></div>
+			<div class="galery container home__container ">
+				<div class="galery-image__container span-3-3">
+					<img src="https://picsum.photos/600/700" alt="">
+				</div>
+				<div class="galery-image__container span-3-2">
+					<img src="https://picsum.photos/750/800" alt="">
+				</div>
+				<div class="galery-image__container span-2-1">
+					<img src="https://picsum.photos/800/650" alt="">
+				</div>
+				<div class="galery-image__container span-1-3">
+					<img src="https://picsum.photos/500/800" alt="">
+				</div>
+				<div class="galery-image__container span-5-2">
+					<img src="https://picsum.photos/1000/400" alt="">
+				</div>
+			</div>
+		</section>
+
+	</main>
+</body>
+
+</html>
